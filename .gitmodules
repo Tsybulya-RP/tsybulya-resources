@@ -1,0 +1,3 @@
+[submodule "cd_easytime"]
+	path = cd_easytime
+	url = https://github.com/dsheedes/cd_easytime
