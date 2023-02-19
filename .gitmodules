@@ -4,3 +4,6 @@
 [submodule "spooner"]
 	path = spooner
 	url = git@github.com:Tsybulya-RP/spooner.git
+[submodule "EasyAdmin"]
+	path = EasyAdmin
+	url = git@github.com:Tsybulya-RP/EasyAdmin.git
