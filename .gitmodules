@@ -1,3 +1,6 @@
 [submodule "cd_easytime"]
 	path = cd_easytime
 	url = https://github.com/dsheedes/cd_easytime
+[submodule "spooner"]
+	path = spooner
+	url = git@github.com:Tsybulya-RP/spooner.git
