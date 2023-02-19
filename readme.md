@@ -1,0 +1,1 @@
+Parent repository for server resources with git submodules
