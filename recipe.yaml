@@ -1,9 +1,9 @@
 $engine: 3
 $onesync: on
-name: ESX Legacy
+name: Tsybulya RP based on ESX Legacy
 version: 1.9.2
-author: ESX Framework
-description: The official recipe of the most popular FiveM RP framework, containing Jobs, Housing, Vehicles & more!
+author: Tsybulya
+description: Custom recipe for txAdmin based on the ESX Legacy for Tsybulya RP server.
 
 tasks:
   # Download default CFX resources
@@ -22,10 +22,6 @@ tasks:
   - action: move_path
     src: ./tmp/recipe/server.cfg
     dest: ./server.cfg
-
-  - action: move_path
-    src: ./tmp/recipe/loadingscreen
-    dest: ./resources/loadingscreen
   
   # Download basic resources and ESX dependencies
 
@@ -215,6 +211,34 @@ tasks:
     ref: main
     dest: ./tmp/addons/esx_sit
 
+  ## Installing custom resources
+
+  - action: download_github
+    src: https://github.com/Tsybulya-RP/tsybulya-recipe
+    ref: main
+    dest: ./tmp/tsybulya
+  
+  - action: download_github
+    src: https://github.com/Tsybulya-RP/spooner
+    ref: 62bb1fbd9e55df3ef05bf057552245362c28a4c4
+    dest: ./tmp/tsybulya/spooner
+  
+  - action: download_github
+    src: https://github.com/Tsybulya-RP/EasyAdmin
+    ref: d40623d364912e4068c1806cba3acf560f905a84
+    dest: ./tmp/tsybulya/EasyAdmin
+
+  - action: download_github
+    src: https://github.com/dsheedes/cd_easytime
+    ref: b238a38454bb436bc5bb889b7da1a46de69a458f
+    dest: ./tmp/tsybulya/cd_easytime
+
+  - action: move_path
+    src: ./tmp/tsybulya/loadingscreen
+    dest: ./resources/loadingscreen
+
+  ## Moving all files from temporary directory
+
   - action: move_path
     src: ./tmp/core/[core]
     dest: ./resources/[core]
@@ -222,6 +246,10 @@ tasks:
   - action: move_path
     src: ./tmp/addons/
     dest: ./resources/[esx_addons]
+  
+  - action: move_path
+    src: ./tmp/tsybulya/
+    dest: ./resources/[tsybulya]
 
   - action: download_github
     src: https://github.com/AvarianKnight/pma-voice
@@ -242,7 +270,6 @@ tasks:
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/oxmysql.zip
-
 
   ## Patching configs: esx-radio
   - action: replace_string
