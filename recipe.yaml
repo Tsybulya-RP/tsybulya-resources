@@ -5,6 +5,12 @@ version: 1.9.2
 author: Tsybulya
 description: Custom recipe for txAdmin based on the ESX Legacy for Tsybulya RP server.
 
+variables:
+  dbHost: mariadb
+  dbUsername: root
+  dbPassword: ""
+  dbName: null
+
 tasks:
   # Download default CFX resources
   - action: download_github
@@ -236,6 +242,13 @@ tasks:
   - action: move_path
     src: ./tmp/tsybulya/loadingscreen
     dest: ./resources/loadingscreen
+
+  ## Configure custom server.cfg stuff
+  
+  - action: replace_string
+    file: ./server.cfg
+    search: 'Key = "UP"'
+    replace: 'Key = "F5"'
 
   ## Moving all files from temporary directory
 
