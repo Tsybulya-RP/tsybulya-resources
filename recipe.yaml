@@ -5,12 +5,6 @@ version: 1.9.2
 author: Tsybulya
 description: Custom recipe for txAdmin based on the ESX Legacy for Tsybulya RP server.
 
-variables:
-  dbHost: mariadb
-  dbUsername: root
-  dbPassword: ""
-  dbName: null
-
 tasks:
   # Download default CFX resources
   - action: download_github
