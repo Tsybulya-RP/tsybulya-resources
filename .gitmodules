@@ -9,7 +9,7 @@
 	url = git@github.com:Tsybulya-RP/EasyAdmin.git
 [submodule "ox_target"]
 	path = ox_target
-	url = https://github.com/overextended/ox_target.git
+	url = https://github.com/Tsybulya-RP/ox_target.git
 [submodule "ox_lib"]
 	path = ox_lib
 	url = git@github.com:overextended/ox_lib.git
