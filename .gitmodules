@@ -10,6 +10,3 @@
 [submodule "ox_target"]
 	path = ox_target
 	url = https://github.com/Tsybulya-RP/ox_target.git
-[submodule "ox_lib"]
-	path = ox_lib
-	url = git@github.com:overextended/ox_lib.git
