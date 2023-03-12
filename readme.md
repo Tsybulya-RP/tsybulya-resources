@@ -1,6 +1,6 @@
-# Tsybulya txAdmin Deployment Recipe
+# Tsybulya txAdmin Deployment Resources
 
-Parent repository for server resources with git submodules
+Parent repository for server resources with git submodules.
 
 ## Submodules
 - [cd_easytime](https://github.com/dsheedes/cd_easytime)
